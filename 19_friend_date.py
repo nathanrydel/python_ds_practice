@@ -20,6 +20,7 @@ def friend_date(a, b):
     a_hobbies = set(a[2])
     b_hobbies = set(b[2])
 
+    # can combine set creation into single line
     if a_hobbies & b_hobbies:
         return True
     else:

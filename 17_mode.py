@@ -17,10 +17,12 @@ def mode(nums):
     for num in nums:
         counter[num] = counter.get(num, 0) + 1
 
+    # max_count = max(counter.values())
     max_count = 0
     max_count_num = None
 
-    for num, count in counter.items():
+    # parens optional and could be easier to read
+    for (num, count) in counter.items():
         if count > max_count:
             max_count = count
             max_count_num = num

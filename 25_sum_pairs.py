@@ -23,16 +23,13 @@ def sum_pairs(nums, goal):
     """
 
     check_set = set()
-    for num in nums:
 
+    for num in nums:
         needed_num = goal - num
+
         if needed_num in check_set:
             return (needed_num, num)
 
         check_set.add(num)
 
     return ()
-
-
-
-

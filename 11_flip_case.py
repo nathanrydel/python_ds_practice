@@ -15,6 +15,7 @@ def flip_case(phrase, to_swap):
     modded_phrase = ""
 
     for letter in phrase:
+        # make it lowercase outside of the loop
         if letter.lower() == to_swap.lower():
             letter = letter.swapcase()
 
