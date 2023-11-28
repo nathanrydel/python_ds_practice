@@ -22,14 +22,17 @@ def is_palindrome(phrase):
         True
     """
 
-    phrase = phrase.lower().replace(' ', '')
+    # instead of reassigning phrase could be better with a new variable name
+    # lower and replace return copies, str are immutable
+
+    normalized_phrase = phrase.lower().replace(' ', '')
 
     i = 0
-    j = len(phrase) - 1
+    j = len(normalized_phrase) - 1
 
     while i < j:
 
-        if phrase[i] != phrase[j]:
+        if normalized_phrase[i] != normalized_phrase[j]:
             return False
 
         i += 1
@@ -37,3 +40,4 @@ def is_palindrome(phrase):
 
     return True
 
+# TODO: another way to implement this is to check if the reverse and non-reverse are equal
