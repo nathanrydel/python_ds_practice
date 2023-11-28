@@ -21,3 +21,18 @@ def sum_pairs(nums, goal):
         >>> sum_pairs([11, 20, 4, 2, 1, 5], 100)
         ()
     """
+
+    check_set = set()
+    for num in nums:
+
+        needed_num = goal - num
+        if needed_num in check_set:
+            return (needed_num, num)
+
+        check_set.add(num)
+
+    return ()
+
+
+
+
