@@ -24,3 +24,6 @@ def partition(lst, fn):
         [item for item in lst if fn(item)],
         [item for item in lst if not fn(item)]
     ]
+
+    # could be a standard loop so that the function is not called twice
+    # true_lst, false_lst and then append to respective list based on fn result
